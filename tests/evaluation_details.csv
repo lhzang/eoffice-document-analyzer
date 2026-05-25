@@ -1,0 +1,51 @@
+﻿file,role,expected,predicted,tier,time,status
+000 danh muc tap chi.txt,Lãnh đạo các đơn vị,A,A,2,14.268991708755493,OK
+01 Qd-PHE DUYET DM nhiem vu  CT Edge AI-1.txt,Giám đốc Đại học Bách khoa Hà Nội,A,A,2,11.143356084823608,OK
+01 Qd-PHE DUYET DM nhiem vu  CT Edge AI-1.txt,Chánh Văn phòng,B,A,2,9.815528154373169,OK
+01 Qd-PHE DUYET DM nhiem vu  CT Edge AI-1.txt,Vụ trưởng Vụ Kế hoạch - Tài chính,B,C,1,28.25730037689209,OK
+1. Đề án thành lập.txt,Nguyễn Bình Minh,C,A,2,9.477680206298828,OK
+1.1_QD cử đi học.txt,Đặng Văn Trung,A,A,2,10.35785460472107,OK
+1.1_QD cử đi học.txt,Chánh văn phòng,B,A,2,8.84354281425476,OK
+1.1_QD cử đi học.txt,Trưởng ban Tổ chức - Nhân sự,B,A,2,10.94782018661499,OK
+1.1_QD cử đi học.txt,Trưởng ban Tài chính - Kế hoạch,B,C,1,0.002001523971557617,OK
+02. Ban hành Quy trình ĐATN trên QLĐT_final.txt,Ban Đào tạo,A,A,2,11.725024700164795,OK
+02. Ban hành Quy trình ĐATN trên QLĐT_final.txt,Giám đốc Trung tâm Chuyển đổi số,B,A,2,11.85993480682373,OK
+02. Ban hành Quy trình ĐATN trên QLĐT_final.txt,Chánh Văn phòng,B,A,2,10.076271295547485,OK
+003 TB xin ư kiên nhân dân NG 2026.txt,Các đơn vị Đại học,B,C,1,0.01502680778503418,OK
+03 Ke hoach - phan cong don vi phoi hop 08.01.2026 vs2.txt,Viện Công nghệ và Kinh tế số,A,A,2,11.465480327606201,OK
+03 Ke hoach - phan cong don vi phoi hop 08.01.2026 vs2.txt,Văn phòng Đại học,B,A,1,16.990437746047974,OK
+03 Ke hoach - phan cong don vi phoi hop 08.01.2026 vs2.txt,Trung tâm Truyền thông và Tri thức số,B,B,2,10.267622232437134,OK
+03 Ke hoach - phan cong don vi phoi hop 08.01.2026 vs2.txt,Ban Cơ sở vật chất,B,A,2,9.432674169540405,OK
+03 Ke hoach - phan cong don vi phoi hop 08.01.2026 vs2.txt,Đoàn Thanh niên,B,A,1,37.85342717170715,OK
+03 Quyetdinh thi dua 2025.txt,Chánh Văn phòng,B,A,2,9.219128608703613,OK
+03 Quyetdinh thi dua 2025.txt,Trưởng ban Tổ chức - Nhân sự,B,A,2,8.56468653678894,OK
+03 Quyetdinh thi dua 2025.txt,Trưởng ban Tài chính - Kế hoạch,B,C,1,0.008998870849609375,OK
+3 CV GUI CAC CO SO GIAO DUC DAI HOC-DE NGHI RA SOAT-DANH GIA-DE XUAT - Copy-1.txt,Các cơ sở giáo dục đại học,A,A,2,10.640053987503052,OK
+3. BGĐ_Kế hoạch Tổ chức Hội nghị CBCC lấy ý kiến bổ nhiệm lại PGĐĐH.txt,Ban Tổ chức - Nhân sự,A,A,1,31.163042545318604,OK
+3. BGĐ_Kế hoạch Tổ chức Hội nghị CBCC lấy ý kiến bổ nhiệm lại PGĐĐH.txt,Văn phòng đại học,B,B,2,9.046411037445068,OK
+3. BGĐ_Kế hoạch Tổ chức Hội nghị CBCC lấy ý kiến bổ nhiệm lại PGĐĐH.txt,Trung tâm TT & TTS,B,A,1,9.967703819274902,OK
+3. BGĐ_Kế hoạch Tổ chức Hội nghị CBCC lấy ý kiến bổ nhiệm lại PGĐĐH.txt,Trung tâm Dịch vụ và hỗ trợ Bách khoa,B,B,2,10.769098281860352,OK
+3. BGĐ_Kế hoạch Tổ chức Hội nghị CBCC lấy ý kiến bổ nhiệm lại PGĐĐH.txt,Các đơn vị cấp 2,B,A,2,11.147302150726318,OK
+04 QD tien thi dua 2026.txt,Chánh Văn phòng,B,A,2,8.602102041244507,OK
+04 QD tien thi dua 2026.txt,Trưởng ban Tổ chức - Nhân sự,B,A,2,9.45836877822876,OK
+04 QD tien thi dua 2026.txt,Trưởng ban Tài chính - Kế hoạch,B,C,1,0.0010025501251220703,OK
+"005 Thông báo kết quả xét NGND, NGUT 2026.txt",Đỗ Bá Lâm,C,C,1,0.01365208625793457,OK
+06. QĐ Ban hành_Chuẩn CTĐT Cử nhân CN_Sau khảo sát.txt,Trưởng Ban Đào tạo,B,C,1,25.840335369110107,OK
+06. QĐ Ban hành_Chuẩn CTĐT Cử nhân CN_Sau khảo sát.txt,Trưởng Ban Tuyển sinh - Hướng nghiệp,B,C,1,0.0025048255920410156,OK
+06. QĐ Ban hành_Chuẩn CTĐT Cử nhân CN_Sau khảo sát.txt,Trưởng ban Tài chính - Kế hoạch,B,C,1,0.002002716064453125,OK
+06.1 Quy định bảng điểm điện tử_final.txt,Ban Đào tạo,A,A,2,10.262614488601685,OK
+06.1 Quy định bảng điểm điện tử_final.txt,Trưởng Ban Quản lý chất lượng,B,C,1,0.001992464065551758,OK
+06.1 Quy định bảng điểm điện tử_final.txt,Chánh Văn phòng,B,A,2,8.230946779251099,OK
+06.1 Quy định bảng điểm điện tử_final.txt,Giám đốc Trung tâm Chuyển đổi số,B,B,1,27.712433099746704,OK
+07-2026-TT-BGDDTsigned-1.txt,Chánh Văn phòng,C,C,1,0.007875204086303711,OK
+18.03.2026_Ke_khai_thong_tin_hien_trang_ha_tang_CNTT_2026.txt,Các đơn vị thuộc và trực thuộc Đại học Bách khoa Hà Nội,A,A,2,9.96483826637268,OK
+21.03.2026_Kế hoạch di chuyển HCI sang DataCenter (1).txt,Trung tâm Chuyển đổi số,A,A,2,11.353203296661377,OK
+21.03.2026_Kế hoạch di chuyển HCI sang DataCenter (1).txt,Đơn vị kỹ thuật,B,A,1,37.15910482406616,OK
+21_TTr-VPT-Tổ chức ngày hội việc làm VALOMA.txt,Ban Giám đốc Đại học,B,A,2,11.84171438217163,OK
+21_TTr-VPT-Tổ chức ngày hội việc làm VALOMA.txt,Ban Cơ sở vật chất,B,A,2,9.928301095962524,OK
+21_TTr-VPT-Tổ chức ngày hội việc làm VALOMA.txt,Trung tâm Dịch vụ và Hỗ trợ Bách khoa,B,A,2,12.607269287109375,OK
+22.01.2026_Tờ trình cử 06 sinh viên tham dự ICAPS tại Malaysia_V4.txt,Ban Giám đốc Đại học,B,A,2,10.90187382698059,OK
+22.01.2026_Tờ trình cử 06 sinh viên tham dự ICAPS tại Malaysia_V4.txt,Ban Công tác Sinh viên,B,A,1,31.398240566253662,OK
+22.01.2026_Tờ trình cử 06 sinh viên tham dự ICAPS tại Malaysia_V4.txt,Ban Đào tạo,B,A,2,10.15687108039856,OK
+22.01.2026_Tờ trình cử 06 sinh viên tham dự ICAPS tại Malaysia_V4.txt,Ban Hợp tác Đối ngoại,B,A,2,10.547348260879517,OK
+28_TTr-VPT.txt,Ban Giám hiệu,B,A,2,9.57583498954773,OK

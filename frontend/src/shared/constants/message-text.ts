@@ -1,0 +1,6 @@
+export const MSG_REQUIRED_FIELD = 'Trường này không được để trống hoặc chỉ chứa khoảng trắng'
+export const MSG_REQUIRED_DROPDOWN_FIELD = 'Thầy/Cô vui lòng chọn trường này'
+export const MSG_PLEASE_SELECT = 'Vui lòng chọn'
+export const MSG_REQUIRED_FILE = 'Vui lòng chọn file'
+export const MSG_FILE_WRONG_FORMAT = 'Vui lòng chọn file đúng định dạng'
+export const MSG_WRONG_FORMAT = 'Vui lòng nhập đúng định dạng'

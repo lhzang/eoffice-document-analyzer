@@ -1,0 +1,276 @@
+KẾ HOẠCH ĐỀ TÀI
+1. Tên đề tài
+Xây dựng mô-đun phân tích và phân loại văn bản hành chính nhằm hỗ trợ đề xuất hành động và ưu tiên xử lý theo vai trò người dùng trong hệ thống eOffice
+
+2. Bối cảnh và vấn đề
+Trong hệ thống eOffice, người dùng thường nhận số lượng lớn văn bản mỗi ngày. Việc đọc từng văn bản để xác định:
+Có cần xử lý hay không
+Nếu có thì cần làm gì
+Thời hạn là khi nào
+Mức độ ưu tiên ra sao
+gây tốn thời gian và dễ bỏ sót công việc.
+Một vấn đề quan trọng là:
+Không phải mọi văn bản đều yêu cầu hành động — nhiều văn bản chỉ mang tính thông báo (“xem để biết”)
+Do đó, cần một hệ thống hỗ trợ:
+phân biệt cần làm vs chỉ cần biết
+gợi ý hành động cụ thể
+sắp xếp mức độ ưu tiên xử lý
+
+3. Mục tiêu đề tài
+3.1. Mục tiêu tổng quát
+Xây dựng mô-đun hỗ trợ phân tích văn bản hành chính trong eOffice, giúp người dùng nhanh chóng nhận diện hành động cần thực hiện và mức độ ưu tiên xử lý.
+
+3.2. Mục tiêu cụ thể
+Phân loại văn bản theo 3 mức đối với từng người dùng/ vai trò:
+A: Cần hành động cụ thể
+B: Cần phối hợp / theo dõi
+C: Chỉ cần biết
+D: Không chắc chắn (không phân loại được)
+
+Trích xuất thông tin quan trọng:
+Hành động chính (báo cáo, tham gia, ký duyệt…)
+Thời gian / deadline
+Đơn vị liên hệ
+Xây dựng cơ chế tính điểm ưu tiên xử lý
+Đưa ra kết quả dưới dạng:
+ngắn gọn, dễ hiểu
+có độ tin cậy (confidence)
+có giải thích (reason)
+Đánh giá hiệu quả hệ thống trên dữ liệu thực tế (~200-300 văn bản)
+4. Phạm vi đề tài
+4.1. Bao gồm
+Văn bản hành chính tiếng Việt (dạng text)
+Kết hợp:
+metadata (vai trò, loại văn bản…)
+nội dung văn bản
+Xây dựng prototype (API hoặc giao diện demo)
+
+4.2. Không bao gồm (giai đoạn này)
+OCR từ ảnh hoặc PDF scan
+Hiểu ngữ nghĩa sâu toàn văn
+Học từ phản hồi của người dùng
+Tích hợp production vào hệ thống thật
+
+5. Cách tiếp cận (Approach)
+5.1. Kiến trúc tổng thể
+Văn bản + Metadata
+        │
+        ▼
+Tiền xử lý
+(Chuẩn hóa, tách câu)
+        │
+        ▼
+Phân tích
+        │
+        ▼
+Tổng hợp kết quả
+(Class + Action + Deadline)
+        │
+        ▼
+Tính điểm ưu tiên
+        │
+        ▼
+Output (JSON / UI)
+
+5.2. Chiến lược kỹ thuật
+🔹 Tầng 1: Rule-based + Metadata (bắt buộc)
+Từ khóa hành động:
+“báo cáo”, “gửi”, “thực hiện”, “phối hợp”, “tham gia”, “cho ý kiến”
+Regex:
+“trước ngày …”, “chậm nhất …”
+Metadata:
+vai trò: chủ trì / phối hợp / biết
+👉 Đây là lõi hệ thống
+
+🔹 Tầng 2: Machine Learning/LLM
+LLM: dùng để xử lý trường hợp mơ hồ, nhưng chạy local, không gọi cloud.
+
+🔹 Tầng 3: Hybrid (kết quả cuối)
+Rule → nếu chắc chắn → override
+LLM → hỗ trợ phần còn lại
+Metadata → điều chỉnh theo người dùng
+6. Dữ liệu và gán nhãn
+6.1. Dataset
+~200-300 văn bản từ hệ thống eOffice
+Ẩn danh nếu cần
+
+6.2. Nhãn dữ liệu
+Mỗi mẫu gồm:
+loại A/B/C
+hành động chính
+deadline
+đơn vị liên hệ
+vai trò người nhận
+ghi chú giải thích
+
+6.3. Lưu ý quan trọng
+Nếu có thể:
+gán nhãn theo (văn bản, vai trò) thay vì chỉ văn bản
+
+7. Đầu ra hệ thống (Output)
+7.1. Dạng cấu trúc (JSON)
+{
+  "type": "A",
+  "action": "Nộp báo cáo",
+  "deadline": "2026-04-05",
+  "organization": "Phòng Đào tạo",
+  "role": "Thực hiện",
+  "priority": "high",
+  "confidence": 0.84,
+  "reason": "Có cụm 'yêu cầu gửi báo cáo trước ngày...'"
+}
+
+7.2. Minh họa giao diện
+📄 Công văn về kế hoạch tập huấn CNTT
+
+🔴 Loại: CẦN HÀNH ĐỘNG  
+📌 Việc cần làm: Đăng ký tham gia tập huấn  
+📅 Thời gian: 25–27/03/2026  
+🏢 Đơn vị: Phòng Đào tạo  
+👤 Vai trò: Thực hiện  
+
+⭐ Ưu tiên: Cao  
+📊 Độ tin cậy: 0.82  
+
+💡 Lý do: Có cụm 'cử cán bộ tham gia tập huấn...'
+
+8. Công thức tính ưu tiên
+Priority Score = BaseClass + RoleWeight + UrgencyWeight + DocumentWeight
+Trong đó:
+BaseClass: A = 3, B = 2, C = 0
+RoleWeight: Chủ trì = 2, phối hợp = 1, biết = 0
+Urgency:
+< 3 ngày = 3
+3–7 ngày = 2
+7 ngày = 1
+Không có deadline = 0
+DocumentWeight: tùy loại văn bản
+Quyết định, Chỉ thị=2
+Công văn, yêu cầu=2
+Kế hoạch=1
+Thông báo=0
+
+9. Ví dụ phân biệt 3 loại A / B / C
+🔴 Ví dụ 1 – Loại A (Cần hành động cụ thể)
+Văn bản (trích yếu): “Yêu cầu các đơn vị gửi báo cáo tổng kết năm 2025 trước ngày 05/04/2026 về Phòng Kế hoạch – Tài chính.”
+Phân tích:
+Có động từ: “yêu cầu”, “gửi báo cáo”
+Có deadline rõ ràng
+👉 Kết luận: Loại A
+Output minh họa:
+Loại: CẦN HÀNH ĐỘNG
+Việc cần làm: Nộp báo cáo tổng kết năm 2025
+Deadline: 05/04/2026
+Đơn vị nhận: Phòng Kế hoạch – Tài chính
+Lý do: Có cụm 'yêu cầu ... gửi báo cáo trước ngày...'
+
+🟡 Ví dụ 2 – Loại B (Cần phối hợp / phản hồi)
+Văn bản (trích yếu): “Đề nghị các đơn vị góp ý cho dự thảo Quy chế quản lý tài sản trước ngày 20/03/2026.”
+Phân tích:
+Có hành động nhưng không phải “deliverable” rõ ràng
+Mang tính phối hợp, phản hồi
+👉 Kết luận: Loại B
+Output:
+Loại: CẦN PHỐI HỢP
+Việc cần làm: Góp ý dự thảo
+Deadline: 20/03/2026
+Lý do: Có cụm 'đề nghị góp ý'
+
+🟢 Ví dụ 3 – Loại C (Chỉ cần biết)
+Văn bản (trích yếu): “Thông báo lịch nghỉ lễ 30/4 và 1/5 năm 2026.”
+Phân tích:
+Không có yêu cầu hành động
+Chỉ cung cấp thông tin
+👉 Kết luận: Loại C
+Output:
+Loại: CHỈ CẦN BIẾT
+Lý do: Văn bản mang tính thông báo, không giao nhiệm vụ
+
+10  Ví dụ QUAN TRỌNG: Cùng 1 văn bản – hành động khác nhau
+Ví dụ 4 – Văn bản kế hoạch tập huấn
+Văn bản (trích yếu): “Tổ chức lớp tập huấn chuyển đổi số từ ngày 25–27/03/2026.
+Giao Phòng CNTT chủ trì triển khai.
+Đề nghị các đơn vị cử cán bộ tham gia.”
+👤 Phòng CNTT
+Metadata:
+Vai trò: Chủ trì
+👉 Phân tích: Có trách nhiệm tổ chức
+Output:
+Loại: CẦN HÀNH ĐỘNG
+Việc cần làm: Tổ chức lớp tập huấn
+Thời gian: 25–27/03/2026
+Vai trò: Chủ trì
+Ưu tiên: Cao
+
+👤 Các Khoa / Đơn vị
+Metadata:
+Vai trò: Thực hiện
+👉 Phân tích: Cần cử người tham gia
+Output:
+Loại: CẦN HÀNH ĐỘNG
+Việc cần làm: Cử cán bộ tham gia tập huấn
+Thời gian: 25–27/03/2026
+Vai trò: Thực hiện
+Ưu tiên: Trung bình
+
+👤 Ban Giám hiệu
+Metadata:
+Vai trò: Để biết
+👉 Phân tích: Không trực tiếp tham gia
+Output:
+Loại: CHỈ CẦN BIẾT
+Lý do: Không có nhiệm vụ trực tiếp
+
+Ví dụ 5 – Văn bản báo cáo
+Văn bản (trích yếu): “Yêu cầu các đơn vị gửi báo cáo quý I/2026 về Phòng Kế hoạch – Tài chính trước ngày 10/04/2026.
+Giao Phòng Kế hoạch – Tài chính tổng hợp.”
+
+👤 Các đơn vị
+Loại: CẦN HÀNH ĐỘNG
+Việc cần làm: Gửi báo cáo quý I
+Deadline: 10/04/2026
+
+👤 Phòng Kế hoạch – Tài chính
+Loại: CẦN HÀNH ĐỘNG
+Việc cần làm: Tổng hợp báo cáo từ các đơn vị
+Deadline: sau 10/04/2026 (ngầm định)
+👉 Đây là ví dụ rất hay:
+cùng văn bản
+nhưng action hoàn toàn khác nhau
+
+👤 Một số đơn vị chỉ nhận để biết
+Loại: CHỈ CẦN BIẾT
+
+ Ví dụ 6 – Văn bản xin ý kiến
+Văn bản (trích yếu):
+“Đề nghị các đơn vị góp ý dự thảo chương trình đào tạo mới.”
+
+👤 Phòng Đào tạo
+Loại: CẦN HÀNH ĐỘNG
+Việc cần làm: Tổng hợp ý kiến
+Vai trò: Chủ trì
+
+👤 Các Khoa
+Loại: CẦN PHỐI HỢP
+Việc cần làm: Góp ý chương trình
+
+👤 Đơn vị khác
+Loại: CHỈ CẦN BIẾT
+
+Insight quan trọng 
+💡 Insight 1
+Phân loại không phải theo văn bản, mà theo (văn bản + người nhận)
+💡 Insight 2
+Metadata (vai trò) thường quyết định 60–70% kết quả
+
+💡 Insight 3
+NLP không cần “hiểu hết”, chỉ cần:
+phát hiện action
+phát hiện deadline
+kết hợp role
+
+📊 4. Ví dụ tổng hợp 
+
+✅ Kết luận
+NLP + metadata + logic nghiệp vụ
+Cùng một văn bản → nhiều hành động khác nhau tùy vai trò

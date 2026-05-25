@@ -1,0 +1,62 @@
+﻿file_name,role,expected_action,extracted_action,phan_loai
+000 danh muc tap chi.txt,Lãnh đạo các đơn vị,Triển khai rà soát và bổ sung danh mục các tạp chí khoa học quốc tế theo lĩnh vực chuyên môn.,Triển khai rà soát và bổ sung danh mục tạp chí khoa học quốc tế.,A
+01 Qd-PHE DUYET DM nhiem vu  CT Edge AI-1.txt,Giám đốc Đại học Bách khoa Hà Nội,"Tuyển chọn tổ chức, các nhân chủ trì thực hiện đề tài","Thực hiện công tác tuyển chọn tổ chức, cá nhân chủ trì thực hiện đề tài.",A
+01 Qd-PHE DUYET DM nhiem vu  CT Edge AI-1.txt,Chánh Văn phòng,Phối hợp phê duyệt danh mục đề tài,"Chủ trì công tác tuyển chọn tổ chức, cá nhân chủ trì.",A
+01 Qd-PHE DUYET DM nhiem vu  CT Edge AI-1.txt,Vụ trưởng Vụ Kế hoạch - Tài chính,Phối hợp phê duyệt danh mục đề tài,Xem để biết,C
+1. Đề án thành lập.txt,Nguyễn Bình Minh,Xem để biết,Chủ trì việc chuẩn bị đăng ký sáng chế eDiploma,A
+1.1_QD cử đi học.txt,Đặng Văn Trung,Tham gia khóa bồi dưỡng ngạch chuyên viên và chuyên viên chính,Xem để biết,C
+1.1_QD cử đi học.txt,Chánh văn phòng,Phối hợp cử CBVC tham gia khóa bồi dưỡng ngạch chuyên viên và chuyên viên chính,Chủ trì thi hành Quyết định này.,A
+1.1_QD cử đi học.txt,Trưởng ban Tổ chức - Nhân sự,Phối hợp cử CBVC tham gia khóa bồi dưỡng ngạch chuyên viên và chuyên viên chính,Chủ trì thi hành Quyết định cử cán bộ tham gia khóa học.,A
+1.1_QD cử đi học.txt,Trưởng ban Tài chính - Kế hoạch,Phối hợp cử CBVC tham gia khóa bồi dưỡng ngạch chuyên viên và chuyên viên chính,Xem để biết,C
+02. Ban hành Quy trình ĐATN trên QLĐT_final.txt,Ban Đào tạo,"Tổ chức hướng dẫn, hỗ trợ kỹ thuật triển khai quy trình trên Ehust",Chủ trì phối hợp triển khai quy trình ĐATN trên eHUST,A
+02. Ban hành Quy trình ĐATN trên QLĐT_final.txt,Giám đốc Trung tâm Chuyển đổi số,Phối hợp ban hành quy trình quản lí thực hiện đồ án/khóa luận tốt nghiệp,Chủ trì phối hợp triển khai quy trình trên eHUST.,A
+02. Ban hành Quy trình ĐATN trên QLĐT_final.txt,Chánh Văn phòng,Phối hợp ban hành quy trình quản lí thực hiện đồ án/khóa luận tốt nghiệp,Chủ trì phối hợp triển khai quy trình trên eHUST.,A
+003 TB xin ư kiên nhân dân NG 2026.txt,Các đơn vị Đại học,"Thông báo toàn thể giảng viên, viên chức và sinh viên về việc lấy ý kiến đề nghị xét tặng danh hiệu",Xem để biết,C
+03 Ke hoach - phan cong don vi phoi hop 08.01.2026 vs2.txt,Viện Công nghệ và Kinh tế số,"Chủ trì tổ chức hội thảo  “ĐỐI THOẠI VỀ XÃ HỘI TRÍ TUỆ NHÂN TẠO - VẬN HỘI VÀ 
+GIẢI PHÁP CHO VIỆT NAM”",Chủ trì và phối hợp tổ chức Hội thảo,A
+03 Ke hoach - phan cong don vi phoi hop 08.01.2026 vs2.txt,Văn phòng Đại học,"Phối hợp chuẩn bị nước bàn đại biểu, nước uống cho các đại biểu tham dự",Phối hợp cùng BKFINTECH chuẩn bị nước uống cho đại biểu,B
+03 Ke hoach - phan cong don vi phoi hop 08.01.2026 vs2.txt,Trung tâm Truyền thông và Tri thức số,"Phối hợp thiết kế thi công pano, standee phục vụ hội thảo",Phối hợp cùng VLAB Việt Nam thiết kế và thi công ấn phẩm sự kiện,B
+03 Ke hoach - phan cong don vi phoi hop 08.01.2026 vs2.txt,Ban Cơ sở vật chất,"Đảm bảo điện, nước, vệ sinh sạch sẽ khu C1, C2","Đảm bảo điện, nước khu vực C1, C2",A
+03 Ke hoach - phan cong don vi phoi hop 08.01.2026 vs2.txt,Đoàn Thanh niên,"Cử 10 sinh viên tình nguyện hỗ trợ công tác hậu cần
+Huy động 300 đoàn viên tham gia và chuẩn bị 10 câu hỏi
+Giới thiệu MC tiếng Anh
+Truyền thông cho sinh viên về hội thảo",Cử 10 đoàn viên sinh viên tình nguyện hỗ trợ công tác hậu cần.,A
+03 Quyetdinh thi dua 2025.txt,Chánh Văn phòng,Phối hợp thi hành quyết định công nhận danh hiệu thi đua,Chủ trì việc thi hành Quyết định này.,A
+03 Quyetdinh thi dua 2025.txt,Trưởng ban Tổ chức - Nhân sự,Phối hợp thi hành quyết định công nhận danh hiệu thi đua,Trưởng ban Tổ chức - Nhân sự chỉ nhận để biết.,B
+03 Quyetdinh thi dua 2025.txt,Trưởng ban Tài chính - Kế hoạch,Phối hợp thi hành quyết định công nhận danh hiệu thi đua,Xem để biết,C
+3 CV GUI CAC CO SO GIAO DUC DAI HOC-DE NGHI RA SOAT-DANH GIA-DE XUAT - Copy-1.txt,Các cơ sở giáo dục đại học,"Đánh giá, tổng kết tình hình thực hiện; phân tích kết quả
+Gửi văn bản rà soát, đề xuất sửa đổi về Cục Hợp tác quốc tế",Đánh giá và tổng kết tình hình thực hiện các nghị định liên quan.,A
+3. BGĐ_Kế hoạch Tổ chức Hội nghị CBCC lấy ý kiến bổ nhiệm lại PGĐĐH.txt,Ban Tổ chức - Nhân sự,Chủ trì tổ chức Hội nghị Cán bộ chủ chốt lấy ý kiến bổ nhiệm lại Phó Giám đốc Đại học Bách khoa Hà Nội,Phối hợp chuẩn bị và sắp xếp phòng Hội nghị,B
+3. BGĐ_Kế hoạch Tổ chức Hội nghị CBCC lấy ý kiến bổ nhiệm lại PGĐĐH.txt,Văn phòng đại học,"Phối hợp chuẩn bị và sắp xếp phòng Hội nghị
+Phối hợp điều động cán bộ tham gia công tác hậu cần
+Cử bộ phận Văn phòng Đảng ủy – Hội đồng đại học phối
+hợp thực hiện chương trình",Phối hợp và triển khai công việc phân công,B
+3. BGĐ_Kế hoạch Tổ chức Hội nghị CBCC lấy ý kiến bổ nhiệm lại PGĐĐH.txt,Trung tâm TT & TTS,Thiết kế backdrop cho Hội nghị,Phối hợp và triển khai công việc phân công,B
+3. BGĐ_Kế hoạch Tổ chức Hội nghị CBCC lấy ý kiến bổ nhiệm lại PGĐĐH.txt,Trung tâm Dịch vụ và hỗ trợ Bách khoa,"Cử 02 cán bộ trực an ninh tại khu vực Hội thảo C2 từ 8h00
+đến 11h00 ngày 15/12/2025",Phối hợp và triển khai công việc đã phân công.,B
+3. BGĐ_Kế hoạch Tổ chức Hội nghị CBCC lấy ý kiến bổ nhiệm lại PGĐĐH.txt,Các đơn vị cấp 2,"Thông báo, đôn đốc cán bộ của đơn vị trong thành phần
+tham dự Hội nghị đầy đủ, đúng giờ",Thông báo và đôn đốc cán bộ tham dự đầy đủ Hội nghị,A
+04 QD tien thi dua 2026.txt,Chánh Văn phòng,"Phối hợp thi hành quyết định trích kinh phí thưởng các tập thể và cá nhân đạt danh hiệu “Tập thể Lao động tiên tiến”, “Chiến sĩ Thi đua cấp cơ sở”, “Lao động tiên tiến”",Chủ trì việc thi hành Quyết định này.,A
+04 QD tien thi dua 2026.txt,Trưởng ban Tổ chức - Nhân sự,"Phối hợp thi hành quyết định trích kinh phí thưởng các tập thể và cá nhân đạt danh hiệu “Tập thể Lao động tiên tiến”, “Chiến sĩ Thi đua cấp cơ sở”, “Lao động tiên tiến”",Trưởng ban Tổ chức - Nhân sự chỉ nhận để biết.,B
+04 QD tien thi dua 2026.txt,Trưởng ban Tài chính - Kế hoạch,"Phối hợp thi hành quyết định trích kinh phí thưởng các tập thể và cá nhân đạt danh hiệu “Tập thể Lao động tiên tiến”, “Chiến sĩ Thi đua cấp cơ sở”, “Lao động tiên tiến”",Xem để biết,C
+"005 Thông báo kết quả xét NGND, NGUT 2026.txt",Đỗ Bá Lâm,Xem để biết,Xem để biết,C
+06. QĐ Ban hành_Chuẩn CTĐT Cử nhân CN_Sau khảo sát.txt,Trưởng Ban Đào tạo,Phối hợp thi hành quyết định ban hành Chuẩn chương trình đào tạo cử nhân công nghệ,Chủ trì việc tổ chức thực hiện Quyết định này.,A
+06. QĐ Ban hành_Chuẩn CTĐT Cử nhân CN_Sau khảo sát.txt,Trưởng Ban Tuyển sinh - Hướng nghiệp,Phối hợp thi hành quyết định ban hành Chuẩn chương trình đào tạo cử nhân công nghệ,Xem để biết,C
+06. QĐ Ban hành_Chuẩn CTĐT Cử nhân CN_Sau khảo sát.txt,Trưởng ban Tài chính - Kế hoạch,Phối hợp thi hành quyết định ban hành Chuẩn chương trình đào tạo cử nhân công nghệ,Xem để biết,C
+06.1 Quy định bảng điểm điện tử_final.txt,Ban Đào tạo,"Chủ trì hướng dẫn, hỗ trợ kỹ thuật triển khai văn bản điện tử, văn bản giấy của lớp học phần và lớp thi trên hệ thống quản lý đào tạo",Chủ trì phối hợp triển khai văn bản điện tử học phần.,A
+06.1 Quy định bảng điểm điện tử_final.txt,Trưởng Ban Quản lý chất lượng,Phối hợp thi hành quyết định ban hành Quy định về quản lý và sử dụng văn bản điện tử và văn bản giấy đối với lớp học phần và lớp thi,Xem để biết,C
+06.1 Quy định bảng điểm điện tử_final.txt,Chánh Văn phòng,Phối hợp thi hành quyết định ban hành Quy định về quản lý và sử dụng văn bản điện tử và văn bản giấy đối với lớp học phần và lớp thi,Chủ trì việc thi hành Quyết định này.,A
+06.1 Quy định bảng điểm điện tử_final.txt,Giám đốc Trung tâm Chuyển đổi số,Phối hợp thi hành quyết định ban hành Quy định về quản lý và sử dụng văn bản điện tử và văn bản giấy đối với lớp học phần và lớp thi,Nhận để biết nội dung quy định.,B
+07-2026-TT-BGDDTsigned-1.txt,Chánh Văn phòng,Xem để biết,Xem để biết,C
+18.03.2026_Ke_khai_thong_tin_hien_trang_ha_tang_CNTT_2026.txt,Các đơn vị thuộc và trực thuộc Đại học Bách khoa Hà Nội,Gửi file Excel kê khai thông tin theo mẫu đính kèm về Trung tâm Chuyển đổi số,Rà soát và kê khai thông tin theo biểu mẫu Excel.,A
+21.03.2026_Kế hoạch di chuyển HCI sang DataCenter (1).txt,Trung tâm Chuyển đổi số,"Chủ trì xây dựng kế hoạch, điều phối và giám sát quá trình triển khai di chuyển hệ thống HCI từ phòng máy chủ cũ sang Data Center",Chủ trì xây dựng kế hoạch và giám sát triển khai,A
+21.03.2026_Kế hoạch di chuyển HCI sang DataCenter (1).txt,Đơn vị kỹ thuật,"Phối hợp thực hiện tháo dỡ, vận chuyển, lắp đặt, đấu nối, kiểm tra kỹ thuật và hỗ trợ xử lý sự cố
+Phối hợp theo dõi ổn định hệ thống trong thời gian sau di chuyển",Phối hợp thực hiện các bước kỹ thuật trong di chuyển hệ thống.,B
+21_TTr-VPT-Tổ chức ngày hội việc làm VALOMA.txt,Ban Giám đốc Đại học,Phê duyệt công tác tổ chức Ngày hội Việc làm VALOMA 2026,Chủ trì hỗ trợ tổ chức Ngày hội Việc làm VALOMA 2026,A
+21_TTr-VPT-Tổ chức ngày hội việc làm VALOMA.txt,Ban Cơ sở vật chất,Phê duyệt công tác tổ chức Ngày hội Việc làm VALOMA 2027,Chủ trì hỗ trợ tổ chức Ngày hội Việc làm VALOMA 2026,A
+21_TTr-VPT-Tổ chức ngày hội việc làm VALOMA.txt,Trung tâm Dịch vụ và Hỗ trợ Bách khoa,Phê duyệt công tác tổ chức Ngày hội Việc làm VALOMA 2028,Chủ trì hỗ trợ tổ chức Ngày hội Việc làm VALOMA 2026,A
+22.01.2026_Tờ trình cử 06 sinh viên tham dự ICAPS tại Malaysia_V4.txt,Ban Giám đốc Đại học,Phê duyệt tờ trình cử 06 sinh viên tham gia cuộc thi “International Capstone Design Project” tại Malaysia,Phê duyệt cử sinh viên tham gia cuộc thi tại Malaysia,A
+22.01.2026_Tờ trình cử 06 sinh viên tham dự ICAPS tại Malaysia_V4.txt,Ban Công tác Sinh viên,Phối hợp triển khai các quyết định cử sinh viên tham gia cuộc thi,Chủ trì phối hợp triển khai cử sinh viên tham gia cuộc thi.,A
+22.01.2026_Tờ trình cử 06 sinh viên tham dự ICAPS tại Malaysia_V4.txt,Ban Đào tạo,Phối hợp triển khai các quyết định cử sinh viên tham gia cuộc thi,Chủ trì phối hợp triển khai cử sinh viên tham gia cuộc thi.,A
+22.01.2026_Tờ trình cử 06 sinh viên tham dự ICAPS tại Malaysia_V4.txt,Ban Hợp tác Đối ngoại,Phối hợp triển khai các quyết định cử sinh viên tham gia cuộc thi,Phối hợp triển khai cử sinh viên tham gia cuộc thi.,B
+28_TTr-VPT.txt,Ban Giám hiệu,Phê duyệt tổ chức sự kiện tư vấn tuyển sinh hướng nghiệp đại học năm 2026,Chủ trì phối hợp tham gia sự kiện tư vấn tuyển sinh,A

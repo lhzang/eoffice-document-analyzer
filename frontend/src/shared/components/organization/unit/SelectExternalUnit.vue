@@ -1,0 +1,154 @@
+<script setup lang="ts">
+import ModalAddExternalUnit from '@/shared/components/organization/unit/ModalAddExternalUnit.vue'
+import { APP_PAGE_SIZE } from '@/shared/constants/common'
+import { APP_PERMISSION_VALUES } from '@/shared/constants/permission'
+import type { TUnitSelectValue } from '@/shared/models/organization/unit'
+import type { ExternalUnitVM } from '@/shared/services/api'
+import { useUserProfileStore } from '@/shared/stores/userProfileStore'
+import { checkIfUserHasPermission } from '@/shared/utils/permission'
+import { useDebounceFn, useInfiniteScroll } from '@vueuse/core'
+import { Button, Checkbox, RadioButton } from 'primevue'
+import { computed, ref, useTemplateRef, watch, watchEffect } from 'vue'
+import { useGetInfiniteListExternalUnits } from '../../../composables/queries/organization/unit/useGetListExternalUnits'
+
+type TProps = {
+  isDefaultValueReadOnly?: boolean
+  isSelectMultiple: boolean
+}
+const { isSelectMultiple } = defineProps<TProps>()
+
+const searchValue = ref<string>('')
+const debouncedSearchValue = ref<string>('')
+const debouncedFn = useDebounceFn((newVal) => {
+  debouncedSearchValue.value = newVal
+}, 500)
+const selectedUnits = defineModel<TUnitSelectValue | TUnitSelectValue[] | null>()
+const user = useUserProfileStore().user
+const isAddNewExternalUnitAllowed = computed(() =>
+  checkIfUserHasPermission(user?.currentPermission ?? [], APP_PERMISSION_VALUES.createExternalUnit)
+)
+const addNewModal = useTemplateRef<InstanceType<typeof ModalAddExternalUnit>>('modalRef')
+const containerRef = useTemplateRef<HTMLElement>('containerRef')
+
+const {
+  data: listExternalUnitsDataPages,
+  isLoading: isGetListExternalUnitsLoading,
+  isFetchingNextPage: isGetNextExternalLoading,
+  fetchNextPage,
+  hasNextPage
+} = useGetInfiniteListExternalUnits(
+  ref({
+    pageSize: APP_PAGE_SIZE,
+    name: debouncedSearchValue
+  }),
+  ref(true)
+)
+watchEffect(() => {
+  console.log(listExternalUnitsDataPages?.value, 'ádfasdfsdafsdafadsfasd')
+})
+// flatted data for use
+const listExternalUnitsData = computed(() =>
+  listExternalUnitsDataPages?.value?.pages?.flatMap((page) => page?.items || [])
+)
+
+const handleOpenAddModal = () => {
+  addNewModal?.value?.openModal()
+}
+
+const getValue = (org: ExternalUnitVM): TUnitSelectValue => ({
+  id: org.id,
+  name: org.name
+})
+useInfiniteScroll(
+  containerRef,
+  async () => {
+    if (hasNextPage.value && !isGetNextExternalLoading.value) {
+      fetchNextPage()
+    }
+  },
+  { distance: 5 }
+)
+
+watch(searchValue, (newValue) => {
+  debouncedFn(newValue)
+})
+</script>
+<template>
+  <div class="flex items-center justify-center">
+    <div
+      class="custom-input border-surface-300 inline-flex h-10 w-full items-center rounded-md border bg-white px-2 py-1"
+      :class="{ ['rounded-none! rounded-l-sm!']: isAddNewExternalUnitAllowed }"
+    >
+      <span
+        class="custom-input--icon__search shrink-0 pl-2 text-2xl text-gray-500"
+        :class="'icon-[line-md--search]'"
+      />
+      <input
+        ref="searchInputRef"
+        class="w-full border-none px-2 py-1 outline-none"
+        placeholder="Tìm kiếm"
+        v-model="searchValue"
+      />
+      <span
+        v-if="searchValue"
+        class="mr-1 text-xl text-gray-400 hover:cursor-pointer active:text-gray-500"
+        :class="'icon-[line-md--close-circle-filled]'"
+        @click="searchValue = ''"
+      />
+    </div>
+    <Button
+      v-if="isAddNewExternalUnitAllowed"
+      class="h-10 shrink-0 rounded-none! rounded-r-md!"
+      contained
+      severity="primary"
+      @click="handleOpenAddModal"
+      >Thêm mới</Button
+    >
+  </div>
+  <div class="bg-primary mt-4 flex h-10 items-center gap-1 px-4 py-2 font-bold text-white">
+    <div class="grid flex-1 grid-cols-22 gap-x-2">
+      <div class="col-span-17">Đơn vị</div>
+      <div class="col-span-5">Mã định danh</div>
+    </div>
+    <div class="flex w-10 shrink-0 items-center justify-center">Chọn</div>
+  </div>
+  <div class="relative h-[400px] min-h-[200px] overflow-auto" ref="containerRef">
+    <div
+      v-if="isGetListExternalUnitsLoading"
+      class="absolute flex h-full min-h-[200px] w-full items-center justify-center"
+    >
+      <span class="icon-[line-md--loading-twotone-loop] text-primary text-5xl"></span>
+    </div>
+    <div
+      v-if="!listExternalUnitsData?.length"
+      class="flex h-full min-h-[200px] w-full items-center justify-center bg-white"
+    >
+      <span class="icon-[mdi--flask-empty-remove-outline] text-4xl text-gray-400"></span>
+      <span class="text-lg font-medium text-gray-400">Không có đơn vị</span>
+    </div>
+    <div
+      class="text-primary border-shadow mb-1/4 flex h-12 items-center gap-1 bg-white px-4 py-2 font-bold"
+      v-else
+      v-for="(org, index) of listExternalUnitsData"
+      :key="index"
+    >
+      <div class="grid flex-1 grid-cols-22 gap-x-2">
+        <div class="col-span-17">{{ org.name }}</div>
+        <div class="col-span-5">{{ org.axisOrgId }}</div>
+      </div>
+      <div class="flex w-10 shrink-0 items-center justify-center">
+        <Checkbox v-if="isSelectMultiple" v-model="selectedUnits" :value="getValue(org)"></Checkbox>
+        <RadioButton v-else v-model="selectedUnits" :value="getValue(org)"></RadioButton>
+      </div>
+    </div>
+    <div
+      class="text-primary mb-1 flex h-10 items-center justify-center gap-1 bg-white px-4 py-2 font-bold"
+      v-if="isGetNextExternalLoading"
+    >
+      <span class="icon-[line-md--loading-twotone-loop] text-3xl"></span>
+    </div>
+  </div>
+  <template v-if="isAddNewExternalUnitAllowed">
+    <ModalAddExternalUnit ref="modalRef" />
+  </template>
+</template>
